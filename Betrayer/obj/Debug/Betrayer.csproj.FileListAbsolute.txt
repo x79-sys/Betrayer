@@ -5,3 +5,7 @@ C:\Users\Navy\source\repos\Betrayer\Betrayer\obj\Debug\Betrayer.csproj.CoreCompi
 C:\Users\Navy\source\repos\Betrayer\Betrayer\obj\Debug\Betrayer.exe
 C:\Users\Navy\source\repos\Betrayer\Betrayer\obj\Debug\Betrayer.pdb
 C:\Users\Navy\source\repos\Betrayer\Betrayer\obj\Debug\Betrayer.csprojAssemblyReference.cache
+C:\Users\Navy\source\repos\Betrayer\Betrayer\bin\Debug\Betrayer.exe.manifest
+C:\Users\Navy\source\repos\Betrayer\Betrayer\bin\Debug\Betrayer.application
+C:\Users\Navy\source\repos\Betrayer\Betrayer\obj\Debug\Betrayer.exe.manifest
+C:\Users\Navy\source\repos\Betrayer\Betrayer\obj\Debug\Betrayer.application
