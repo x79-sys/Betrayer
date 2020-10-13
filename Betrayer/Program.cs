@@ -55,6 +55,12 @@ namespace Betrayer
             {
                 ccmc();
             }
+            else if ( choice == "Z" || choice == "z")
+            {
+                Console.WriteLine("Hope to see you soon :)");
+                Thread.Sleep(1000);
+                Environment.Exit(5);
+            }
         }
         static void mc()
         {
@@ -101,25 +107,34 @@ namespace Betrayer
             }
             else if (file.EndsWith(".txt"))
             {
-                foreach (string line in File.ReadAllLines(file))
+                try
                 {
-                    string[] temp = line.Split(':');
-                    string user = temp[0];
-                    string password = temp[1];
-                    var result = combo.check(user, password);
-                    if (result == true)
+                    foreach (string line in File.ReadAllLines(file))
                     {
-                        Console.ForegroundColor = ConsoleColor.Green;
-                        Console.WriteLine("Email :: " + user + " || Password :: " + password);
-                        Console.ForegroundColor = ConsoleColor.White;
-                        hits += 1;
+                        string[] temp = line.Split(':');
+                        string user = temp[0];
+                        string password = temp[1];
+                        var result = combo.check(user, password);
+                        if (result == true)
+                        {
+                            Console.ForegroundColor = ConsoleColor.Green;
+                            Console.WriteLine("Email :: " + user + " || Password :: " + password);
+                            Console.ForegroundColor = ConsoleColor.White;
+                            hits += 1;
+                        }
+                        else if (result == false)
+                        {
+                            miss += 1;
+                        }
+                        checks += 1;
+                        Console.Title = "Betrayer || Checks : " + checks + " || Hits : " + hits + " || Miss : " + miss;
                     }
-                    else if (result == false)
-                    {
-                        miss += 1;
-                    }
-                    checks += 1;
-                    Console.Title = "Betrayer || Checks : "+checks+" || Hits : "+hits+" || Miss : "+miss;
+                }
+                catch
+                {
+                    Console.WriteLine("No file found :9 \n Sending you back to the main menu");
+                    Thread.Sleep(2500);
+                    innit();
                 }
             }
             retrun();
