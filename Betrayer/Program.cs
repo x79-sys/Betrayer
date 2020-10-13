@@ -14,7 +14,7 @@ namespace Betrayer
     {
         static void Main(string[] args)
         {
-            Console.Title = "Betrayer || Version 1.0";
+            Console.Title = "Betrayer || Version 1.1";
             init_screen();
             menu();
         }
@@ -59,7 +59,7 @@ namespace Betrayer
             {
                 Console.WriteLine("Hope to see you soon :)");
                 Thread.Sleep(1000);
-                Environment.Exit(5);
+                Environment.Exit(0);
             }
         }
         static void mc()
