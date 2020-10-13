@@ -8,9 +8,9 @@ using System.Net;
 
 namespace Betrayer
 {
-    class auth
+    class combo
     {
-        public static string login(string user, string password)
+        public static bool check(string user, string password)
         {
             var httpWebRequest = (HttpWebRequest)WebRequest.Create("https://authserver.mojang.com/authenticate");
             httpWebRequest.ContentType = "application/json";
@@ -26,13 +26,12 @@ namespace Betrayer
             {
                 var httpResponse = (HttpWebResponse)httpWebRequest.GetResponse();
                 var streamReader = new StreamReader(httpResponse.GetResponseStream());
-                var result = streamReader.ReadToEnd();
-                return result.ToString();
+                return true;
             }
 
             catch
             {
-                return "Invalid Account";
+                return false;
             }
         }
     }

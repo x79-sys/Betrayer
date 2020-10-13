@@ -1,0 +1,7 @@
+C:\Users\Navy\source\repos\Betrayer\Betrayer\bin\Debug\Betrayer.exe.config
+C:\Users\Navy\source\repos\Betrayer\Betrayer\bin\Debug\Betrayer.exe
+C:\Users\Navy\source\repos\Betrayer\Betrayer\bin\Debug\Betrayer.pdb
+C:\Users\Navy\source\repos\Betrayer\Betrayer\obj\Debug\Betrayer.csproj.CoreCompileInputs.cache
+C:\Users\Navy\source\repos\Betrayer\Betrayer\obj\Debug\Betrayer.exe
+C:\Users\Navy\source\repos\Betrayer\Betrayer\obj\Debug\Betrayer.pdb
+C:\Users\Navy\source\repos\Betrayer\Betrayer\obj\Debug\Betrayer.csprojAssemblyReference.cache
