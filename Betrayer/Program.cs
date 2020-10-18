@@ -14,7 +14,7 @@ namespace Betrayer
     {
         static void Main(string[] args)
         {
-            Console.Title = "Betrayer || Version 1.1";
+            Console.Title = "Betrayer || Version 1.2";
             init_screen();
             menu();
         }
@@ -37,7 +37,6 @@ namespace Betrayer
         static void menu()
         {
             Console.WriteLine("[A] Minecraft");
-            Console.WriteLine("[B] Proxy Checker (Not working)");
             Console.WriteLine("[C] Combo Checker mc");
             Console.WriteLine("[Z] Exit");
             Console.ForegroundColor = ConsoleColor.Red;
@@ -47,10 +46,6 @@ namespace Betrayer
             {
                 mc();
             }
-            else if ( choice == "B" || choice == "b")
-            {
-                innit();
-            }
             else if ( choice == "C" || choice == "c")
             {
                 ccmc();
@@ -59,7 +54,7 @@ namespace Betrayer
             {
                 Console.WriteLine("Hope to see you soon :)");
                 Thread.Sleep(1000);
-                Environment.Exit(0);
+                Environment.Exit(5);
             }
         }
         static void mc()
@@ -121,9 +116,17 @@ namespace Betrayer
                             Console.WriteLine("Email :: " + user + " || Password :: " + password);
                             Console.ForegroundColor = ConsoleColor.White;
                             hits += 1;
+                            Random rnd = new Random();
+                            int ran = rnd.Next(0,1221300);
+                            string path = "result-" + ran;
+                            string ok = user + ":" + password + "\n";
+                            File.WriteAllText(path, ok);
                         }
                         else if (result == false)
                         {
+                            Console.ForegroundColor = ConsoleColor.Red;
+                            Console.WriteLine("Email :: " + user + " || Password :: " + password);
+                            Console.ForegroundColor = ConsoleColor.White;
                             miss += 1;
                         }
                         checks += 1;
